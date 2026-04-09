@@ -15,6 +15,8 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const appointmentRoutes = require('./routes/appointments');
 const medicalRecordRoutes = require('./routes/medicalRecords');
+const labRequestRoutes = require('./routes/labRequests');
+const certificateRoutes = require('./routes/certificates');
 
 const app = express();
 
@@ -70,6 +72,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/appointments', appointmentRoutes);
 app.use('/api/medical-records', medicalRecordRoutes);
+app.use('/api/lab-requests', labRequestRoutes);
+app.use('/api/certificates', certificateRoutes);
 
 // 404 handler
 app.use((req, res) => {

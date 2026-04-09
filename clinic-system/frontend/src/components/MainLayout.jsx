@@ -16,6 +16,8 @@ const MainLayout = () => {
     { name: 'Dashboard', href: '/dashboard', icon: '📊' },
     { name: 'Appointments', href: '/appointments', icon: '📅' },
     { name: 'Medical Records', href: '/medical-records', icon: '📋' },
+    { name: 'Laboratory', href: '/lab-requests', icon: '🧪' },
+    { name: 'Certificates', href: '/certificates', icon: '📄' },
     { name: 'Profile', href: '/profile', icon: '👤' },
   ];
 

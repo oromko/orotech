@@ -4,11 +4,14 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- Create ENUM types
-CREATE TYPE user_role AS ENUM ('admin', 'doctor', 'nurse', 'receptionist', 'patient');
+CREATE TYPE user_role AS ENUM ('admin', 'doctor', 'nurse', 'receptionist', 'patient', 'lab_technician');
 CREATE TYPE appointment_type AS ENUM ('checkup', 'followup', 'consultation', 'emergency', 'procedure');
 CREATE TYPE appointment_status AS ENUM ('scheduled', 'confirmed', 'in_progress', 'completed', 'cancelled', 'no_show');
 CREATE TYPE gender_type AS ENUM ('male', 'female', 'other');
 CREATE TYPE record_status AS ENUM ('draft', 'completed', 'amended');
+CREATE TYPE lab_request_status AS ENUM ('Pending', 'In Progress', 'Completed', 'Cancelled');
+CREATE TYPE lab_priority AS ENUM ('Normal', 'High');
+CREATE TYPE certificate_status AS ENUM ('Active', 'Expired', 'Revoked');
 
 -- Users table
 CREATE TABLE users (

@@ -13,6 +13,10 @@ import MedicalRecords from './pages/MedicalRecords';
 import Profile from './pages/Profile';
 import AdminPanel from './pages/AdminPanel';
 
+// Components
+import LabRequests from './components/LabRequests';
+import MedicalCertificates from './components/MedicalCertificates';
+
 // Protected Route Component
 const ProtectedRoute = ({ children, allowedRoles }) => {
   const { user, isAuthenticated } = useAuthStore();
@@ -49,6 +53,8 @@ function App() {
         <Route path="appointments" element={<Appointments />} />
         <Route path="medical-records" element={<MedicalRecords />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="lab-requests" element={<LabRequests />} />
+        <Route path="certificates" element={<MedicalCertificates />} />
         <Route
           path="admin"
           element={
